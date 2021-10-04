@@ -21,24 +21,35 @@ function createJaum(place) {
 document.addEventListener("keydown", (event) => {
   const keyName = event.key;
   if (keyName === "ArrowUp") {
-    positionY = positionY.previousElementSibling;
-    positionYChilds = positionY.childNodes;
-    positionYChilds[positionIndex].appendChild(jaum);
-    positionX = positionYChilds[positionIndex];
+    nextMoviment = positionY.previousElementSibling.childNodes[positionIndex];
+    if (nextMoviment.classList.contains("empty") || checkVictory()) {
+      positionY = positionY.previousElementSibling;
+      positionYChilds = positionY.childNodes;
+      positionYChilds[positionIndex].appendChild(jaum);
+      positionX = positionYChilds[positionIndex];
+    }
   } else if (keyName === "ArrowDown") {
-    positionY = positionY.nextElementSibling;
-    positionYChilds = positionY.childNodes;
-    positionYChilds[positionIndex].appendChild(jaum);
-    positionX = positionYChilds[positionIndex];
+    nextMoviment = positionY.nextElementSibling.childNodes[positionIndex];
+    if (nextMoviment.classList.contains("empty") || checkVictory()) {
+      positionY = positionY.nextElementSibling;
+      positionYChilds = positionY.childNodes;
+      positionYChilds[positionIndex].appendChild(jaum);
+      positionX = positionYChilds[positionIndex];
+    }
   } else if (keyName === "ArrowLeft") {
-    positionX = positionX.previousElementSibling;
-    positionX.appendChild(jaum);
-    positionIndex--;
+    nextMoviment = positionX.previousElementSibling;
+    if (nextMoviment.classList.contains("empty") || checkVictory()) {
+      positionX = positionX.previousElementSibling;
+      positionX.appendChild(jaum);
+      positionIndex--;
+    }
   } else if (keyName === "ArrowRight") {
-    positionX = positionX.nextElementSibling;
-    console.log(positionX);
-    positionX.appendChild(jaum);
-    positionIndex++;
+    nextMoviment = positionX.nextElementSibling;
+    if (nextMoviment.classList.contains("empty") || checkVictory()) {
+      positionX = positionX.nextElementSibling;
+      positionX.appendChild(jaum);
+      positionIndex++;
+    }
   } else if (keyName === " ") {
     if (jaum.lastChild.classList.value !== "mouth") {
       mouth();
@@ -50,6 +61,7 @@ document.addEventListener("keydown", (event) => {
   }
 });
 
+/* ------- Litle surprise when press the right key ------ */
 function mouth() {
   const surprise = document.createElement("div");
   surprise.classList.add("mouth");

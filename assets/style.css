@@ -46,6 +46,8 @@ section {
 .end {
   width: var(--width-block-size);
   height: var(--heigh-block-size);
+  display: grid;
+  place-items: center;
 }
 
 div.w {
@@ -76,13 +78,10 @@ div.end {
 
 /* ------------------ PLAYER CHAR STYLE ----------------- */
 #jaum {
-  width: var(--width-block-size);
-  height: var(--width-block-size);
+  width: calc(var(--width-block-size) / 1.1);
+  height: calc(var(--width-block-size) / 1.1);
   background-color: bisque;
   border-radius: 50%;
-  /* position: absolute;
-  left: 0px;
-  top: 0px; */
 }
 
 .rotate {
