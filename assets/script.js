@@ -36,7 +36,9 @@ const createMap = (mapInstruction) => {
 
 function checkVictory() {
   if (nextMoviment.classList.contains("end")) {
-    console.log("Parabéns! você ganhou!!!");
+    console.log(
+      "Parabéns para você que gosta de olhar o console! você ganhou!!!"
+    );
     mouth();
     endPosition.style.backgroundImage = "url('./assets/img/grass.png')";
     endPosition.style.border = "none";
@@ -50,8 +52,10 @@ function checkVictory() {
 createMap(map);
 
 startButton.addEventListener("click", () => {
-  // createMap(map);
+  resetGame();
+  gameBoard.style.display = "block";
   startScreen.classList.add("hidde");
+  wonScreen.classList.toggle("hidde");
 });
 
 /* ---------------- Control char position --------------- */
@@ -59,3 +63,12 @@ let positionY = startPosition.parentElement;
 let positionYChilds = positionY.childNodes;
 let positionX = startPosition;
 let nextMoviment;
+
+function resetGame() {
+  startPosition.appendChild(jaum);
+  positionY = startPosition.parentElement;
+  positionYChilds = positionY.childNodes;
+  positionX = startPosition;
+  positionIndex = 0;
+  endPosition.style.backgroundImage = "url('./assets/img/door.png')";
+}

@@ -71,7 +71,7 @@ div.end {
 }
 
 #game {
-  /* display: none; */
+  display: none;
   place-items: center;
 }
 
