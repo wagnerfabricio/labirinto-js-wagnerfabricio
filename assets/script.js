@@ -1,9 +1,14 @@
 const gameBoard = document.getElementById("game");
+const startScreen = document.getElementsByClassName("initial")[0];
+const wonScreen = document.getElementsByClassName("won")[0];
+const startButton = document.getElementById("startButton");
+
 let startPosition;
 let endPosition;
 let positionIndex;
 
 const createMap = (mapInstruction) => {
+  gameBoard.innerHTML = "";
   mapInstruction.forEach((element, i) => {
     const newLine = document.createElement("section");
     newLine.id = `line${i}`;
@@ -35,13 +40,19 @@ function checkVictory() {
     mouth();
     endPosition.style.backgroundImage = "url('./assets/img/grass.png')";
     endPosition.style.border = "none";
+    wonScreen.appendChild(startButton);
+    wonScreen.classList.toggle("hidde");
     return true;
   }
   return false;
 }
 
 createMap(map);
-jaum = document.getElementById("jaum");
+
+startButton.addEventListener("click", () => {
+  // createMap(map);
+  startScreen.classList.add("hidde");
+});
 
 /* ---------------- Control char position --------------- */
 let positionY = startPosition.parentElement;

@@ -19,18 +19,23 @@
 </head>
 
 <body>
-    <section class="initial hidde">
+    <section class="initial">
         <h1>Tente chegar até a saída do labirindo</h1>
         <p>Pressione as teclas </p>
-        <i class='fas fa-arrow-alt-circle-up'></i>
-        <i class='fas fa-arrow-alt-circle-right'></i>
-        <i class='fas fa-arrow-alt-circle-down'></i>
-        <i class='fas fa-arrow-alt-circle-left'></i>
+        <p>
+            <i class='fas fa-arrow-alt-circle-up'></i>
+            <i class='fas fa-arrow-alt-circle-right'></i>
+            <i class='fas fa-arrow-alt-circle-down'></i>
+            <i class='fas fa-arrow-alt-circle-left'></i>
+        </p>
         <p>para se movimentar pelo labirindo</p>
-        <button>Iniciar</button>
+        <button id="startButton">Iniciar</button>
     </section>
-    <main id="game">
-    </main>
+    <section class="won hidde">
+        <h1>Parabéns você conseguiu!!!</h1>
+        <p>Gostaria de jogar novamente?</p>
+    </section>
+    <main id="game"></main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/js/all.min.js"
         integrity="sha512-cyAbuGborsD25bhT/uz++wPqrh5cqPh1ULJz4NSpN9ktWcA6Hnh9g+CWKeNx2R0fgQt+ybRXdabSBgYXkQTTmA=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>

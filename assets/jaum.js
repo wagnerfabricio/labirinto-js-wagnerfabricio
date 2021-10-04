@@ -15,7 +15,7 @@ function createJaum(place) {
   jaumEyes.appendChild(jaumEye.cloneNode(true));
   createJaum.appendChild(jaumEyes);
   place.appendChild(createJaum);
-  jaum = document.getElementById("jaum");
+  jaum = createJaum;
 }
 
 document.addEventListener("keydown", (event) => {
