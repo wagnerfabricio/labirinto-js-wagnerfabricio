@@ -59,6 +59,9 @@ document.addEventListener("keydown", (event) => {
       }, 1000);
     }
   }
+  if (startPosition.childNodes.length === 0) {
+    startPosition.style.backgroundImage = "url('./assets/img/door.png')";
+  }
 });
 
 /* ------- Litle surprise when press the right key ------ */

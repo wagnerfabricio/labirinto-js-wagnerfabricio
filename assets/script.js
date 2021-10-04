@@ -71,4 +71,5 @@ function resetGame() {
   positionX = startPosition;
   positionIndex = 0;
   endPosition.style.backgroundImage = "url('./assets/img/door.png')";
+  startPosition.style.backgroundImage = "url('./assets/img/grass.png')";
 }
