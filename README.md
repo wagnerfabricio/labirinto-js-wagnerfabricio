@@ -39,7 +39,7 @@ const map = [
 <div align="center">
 
 ![Maze game](readme/maze.png)
-![iPhone frame with maze game](readme/maze_mogile.png)
+![iPhone frame with maze game](readme/maze_mobile.png)
 
 </div>
 </td>
