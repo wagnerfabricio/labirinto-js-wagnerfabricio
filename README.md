@@ -6,6 +6,8 @@ Press the "space" key to see a special moviment!
 
 The maze is a 2D array of cells that represent the floor (passable) or walls (impassable).
 
+GitHub Pages link: [https://wagnerfabricio.github.io/labirinto-js-wagnerfabricio/](https://wagnerfabricio.github.io/labirinto-js-wagnerfabricio/)
+
 ![maze.gif](https://files-kenzie-academy-brasil.s3.amazonaws.com/maze.gif)
 
 This JavaScript represents the maze described above. Each "W" represents a wall, "S" the starting position and "F" the finish line. Spaces are empty cells where the player can move.
